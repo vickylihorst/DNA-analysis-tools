@@ -3,6 +3,7 @@ from pattern_count import patternCount
 
 workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
 fileName = "frequent_words_test.txt"
+# The format of the file is: DNA in the first line, and the k-mer integer in the second line.
 
 # this function creates the algorithm for finding the most frequent k-mers in a DNA string by performing the following steps:
 # 1. checking all k-mers in the DNA
@@ -28,5 +29,5 @@ def frequentWords(text, k):
 if __name__ == "__main__":
 	with open(workingDir+fileName, 'r') as input:
 		text = input.readline().rstrip()
-		k = 3		# looking for k-mer
+		k = int(input.readline().rstrip())
 		patterns = frequentWords(text,k)
