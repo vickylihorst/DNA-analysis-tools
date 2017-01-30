@@ -22,4 +22,4 @@ The function patternMatch() takes the two strings, pattern and genome, and retur
 
 # clump_finding
 
-The function clumpFinding() outpus all distinct k-mers forming (L,t)-clumps in genome, where L is the length of ori in the genome. The input is a string genome, and integers k, L, and t. A k-mer pattern forms an (L,t)-clump inside a genome if there is an interval of genome of length L in which this k-mer appears at least t times.
+The function clumpFinding() outpus all distinct k-mers forming (L,t)-clumps in a genome, where L is the length of ori in the genome. A k-mer pattern forms an (L,t)-clump inside a genome if there is an interval of genome of length L in which this k-mer appears at least t times. The input is a string genome, and integers k, L, and t. 

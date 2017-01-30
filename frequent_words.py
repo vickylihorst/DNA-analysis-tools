@@ -36,20 +36,21 @@ def patternToNumber(pattern):
 	base4result = []
 	result = 0
 	# take the pattern and converts it to a base-4 integer, following the mapping where A=0, C=1, G=2, T=3.
-	for i in range(0,len(pattern)): #// to-do: change to "for e in pattern:"
-		if pattern[i].upper() == "A":
+	for e in pattern:
+		if e.upper() == "A":
 			base4result.append(0)
-		elif pattern[i].upper() == "C":
+		elif e.upper() == "C":
 			base4result.append(1)
-		elif pattern[i].upper() == "G":
+		elif e.upper() == "G":
 			base4result.append(2)
-		elif pattern[i].upper() == "T":
+		elif e.upper() == "T":
 			base4result.append(3)
 
 	# convert the base-4 integer to a base-10 integer.
-	for j in range(0,len(base4result)): #// to-do: change to "for e in base4result:"
+	for j in range(0,len(base4result)): 
 		result = result + base4result[len(base4result) - j - 1] * 4**j
 	return result
+
 
 	
 # This function is the reverse of PatternToNumber(), where it transforms an integer between 0 and 4^k-1 into a k-mer.
@@ -118,6 +119,7 @@ if __name__ == "__main__":
 		#print(frequencyArrayString)
 		#pattern = numberToPattern(6,3)
 		#print(pattern)
+		#print(nucleotideToNumber("ATCG"))
 		frequentPatterns = fasterFrequentWords(text,k)
 		print(frequentPatterns)
 
