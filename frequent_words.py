@@ -51,6 +51,29 @@ def patternToNumber(pattern):
 		result = result + base4result[len(base4result) - j - 1] * 4**j
 	return result
 
+#============ use recursion  ===============
+# functionally similar to patternToNumber(), patternToNumber2() uses recursion instead
+def patternToNumber2(pattern):
+	if len(pattern) == 0:
+		return 0
+	last = pattern[-1]
+	current = pattern[0:-1]
+	return 4*patternToNumber2(current) + nucleotideToNumber(last)
+
+# converts a nucleotide to its corresponding number, such that A=0, C=1, G=2, T=3.
+def nucleotideToNumber(nucleotide):
+	for e in nucleotide:
+		if e.upper() == "A":
+			number = 0
+		elif e.upper() == "C":
+			number = 1
+		elif e.upper() == "G":
+			number = 2
+		elif e.upper() == "T":
+			number = 3
+	return number
+
+#======================================
 
 	
 # This function is the reverse of PatternToNumber(), where it transforms an integer between 0 and 4^k-1 into a k-mer.
@@ -120,8 +143,12 @@ if __name__ == "__main__":
 		#pattern = numberToPattern(6,3)
 		#print(pattern)
 		#print(nucleotideToNumber("ATCG"))
-		frequentPatterns = fasterFrequentWords(text,k)
-		print(frequentPatterns)
+		#CAATTCGACGGAGAATCGGT
+		print(patternToNumber("CAATTCGACGGAGAATCGGT"))
+		number = patternToNumber2("CAATTCGACGGAGAATCGGT")
+		print(number)
+		#frequentPatterns = fasterFrequentWords(text,k)
+		#print(frequentPatterns)
 
 
 

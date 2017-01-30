@@ -10,6 +10,8 @@ The complexity of this algorith is O(n^2*k), where n is the length of the text.
 
 The function fasterFrequentWords() performs the same job but increases performance.
 
+The function patternToNumber() and patternToNumber2() solves the same problem, where they transform a k-mer pattern into an integer, which is the index of the pattern in the frequency array. The frequency array orders all 4^k k-mers lexicographically. The difference between the two functions is patternToNumber2() uses recursion.
+
 
 # reverse_complement_string
 
