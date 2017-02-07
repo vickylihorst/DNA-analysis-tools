@@ -25,3 +25,17 @@ The function patternMatch() takes the two strings, pattern and genome, and retur
 # clump_finding
 
 The function clumpFinding() outpus all distinct k-mers forming (L,t)-clumps in a genome, where L is the length of ori in the genome. A k-mer pattern forms an (L,t)-clump inside a genome if there is an interval of genome of length L in which this k-mer appears at least t times. The input is a string genome, and integers k, L, and t. A clump is also sometimes called a cluster.
+
+# minimum_skew
+
+The function minimumSkew() takes a DNA string and outputs all integer(s) i minimizing "Skew(genome) sub i" among all values of i for the entire input genome. The hypothesis is the integer(s) that minimizes the skew diagram is the origin of DNA replication. For more details on the hypothesis and the theory, see the comments in minimum_skew.py
+
+The program can also plot the skew diagram by uncommenting the line `plt.show()`.
+
+# hamming_distance
+
+The function hammingDistace() finds the number of mismatches between two strings (aka the Hamming distance), such that position i in k-mers p1...pk and q1...qk is a mismatch if pi doesn't equal to qi, where p and q are two strings. 
+
+# approximate_pattern_match
+
+The function approximatePatternMatch() finds where a pattern appears as a substring of text with at most d mismatches. The function takes pattern, text, and an integer d, and outputs the total count and all starting positions where pattern appears as a substring of text with at most d mismatches.
