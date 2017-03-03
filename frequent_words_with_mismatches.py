@@ -40,7 +40,7 @@ def neighbors(pattern,d):
 	#return "\n".join(neighborhoodList)
 
 if __name__ == '__main__':
-	neighborhoodList = neighbors("ACG",1)
+	neighborhoodList = neighbors("CAACGCAC",2)
 	print("\n".join(neighborhoodList))
 	#print(neighbors("ACG",1))
 	# with open(workingDir+filename,"r") as file:
