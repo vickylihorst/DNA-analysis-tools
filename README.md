@@ -41,4 +41,5 @@ The function hammingDistace() finds the number of mismatches between two strings
 The function approximatePatternMatch() finds where a pattern appears as a substring of text with at most d mismatches. The function takes pattern, text, and an integer d, and outputs the total count and all starting positions where pattern appears as a substring of text with at most d mismatches.
 
 # neighbors
+
 The functino neighbors() generates the set of all k-mers whose Hamming distance from pattern doesn not exceed d.
