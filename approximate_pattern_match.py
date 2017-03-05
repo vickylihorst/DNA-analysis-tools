@@ -3,8 +3,7 @@
 
 from hamming_distance import hammingDistance
 
-workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
-fileName = "approximate_pattern_match_test.txt"
+filename = "approximate_pattern_match_test.txt"
 #fileName = "approximate_pattern_match_sample.txt"
 
 # The function approximatePatternMatch() takes pattern, text, and an integer d, and outputs the total count and all starting positions where pattern appears as a substring of text with at most d mismatches
@@ -20,7 +19,7 @@ def approximatePatternMatch(pattern,text,d):
 	return count,startingPos
 
 if __name__ == '__main__':
-	with open(workingDir+fileName, 'r') as file:	
+	with open("fixture/{0}".format(filename),"r") as file:	
 		pattern = file.readline().rstrip()
 		text = file.readline().rstrip()
 		d = int(file.readline().rstrip())

@@ -1,8 +1,7 @@
 # author: Vicky Li Horst
 
-workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
-fileName = "pattern_match_test.txt"
-#fileName = "vibrio-cholerae-genome.txt"
+filename = "pattern_match_test.txt"
+#filename = "vibrio-cholerae-genome.txt"
 
 
 # This function takes the two strings, pattern and genome, and returns a collection of space-separted integers specifying all starting positions where pattern appears as a substring of genome.
@@ -16,7 +15,7 @@ def patternMatch(pattern,genome):
 	return position
 
 if __name__ == '__main__':
-	with open(workingDir + fileName,"r") as file:
+	with open("fixture/{0}".format(filename),"r") as file:
 		pattern = file.readline().rstrip()
 		genome = file.readline().rstrip()
 		position = patternMatch(pattern,genome)

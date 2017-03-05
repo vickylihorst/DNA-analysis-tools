@@ -1,7 +1,7 @@
 # Author: Vicky Li Horst
-workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
-#fileName = "vibrio-cholerae-genome.txt"
-fileName = "pattern_count_test.txt"
+
+#filename = "vibrio-cholerae-genome.txt"
+filename = "pattern_count_test.txt"
 # the structure of the input file is the first line is the genome, and the second line is the pattern
 
 
@@ -18,7 +18,7 @@ def patternCount(text,pattern):
 
 	
 if __name__ == "__main__":
-	with open(workingDir+fileName, 'r') as input:
+	with open("fixture/{0}".format(filename),"r") as input:
 		text = input.readline().rstrip() # use rstrip() to get rid of whitespace characters from the end of the string
 		pattern = input.readline().rstrip()
 		totalCount = patternCount(text,pattern)

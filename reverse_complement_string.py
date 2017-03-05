@@ -2,8 +2,7 @@
 
 from collections import deque
 
-workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
-fileName = "reverse_complement_string_test.txt"
+filename = "reverse_complement_string_test.txt"
 
 # This function finds the reverse complement of a DNA string.
 # For example, if the input is AAAACCCGGT, then its reverse complement string is ACCGGGTTTT.
@@ -25,7 +24,7 @@ def reverseComplementString(text):
 	return reverseString
 
 if __name__ == '__main__':
-	with open(workingDir + fileName,"r") as input:
+	with open("fixture/{0}".format(filename),"r") as input:
 		text = input.readline().rstrip() # the format of the input file is one line of a DNA string
 		reverse = reverseComplementString(text)
 		# could write the result to a file if the input string is long

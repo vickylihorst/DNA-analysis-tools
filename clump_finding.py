@@ -3,8 +3,8 @@ from frequent_words import computingFrequencies
 from frequent_words import patternToNumber
 from frequent_words import numberToPattern
 workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
-#fileName = "clump_finding_test.txt"
-fileName = "sample.txt" #this is the E. coli genome
+filename = "clump_finding_test.txt"
+#filename = "sample.txt" #this is the E. coli genome
 # This function outpus all distinct k-mers forming (L,t)-clumps in genome, where L is the length of ori in the genome. The input is a string genome, and integers k, L, and t.
 # The definition of a clump is a k-mer that appears many times within a short interval of the genome.
 # a k-mer pattern forms an (L,t)-clump inside a genome if there is an interval of genome of length L in which this k-mer appears at least t times.
@@ -40,7 +40,7 @@ def clumpFinding(genome,k,t,L):
 
 
 if __name__=="__main__":
-	with open (workingDir + fileName, "r") as file:
+	with open ("fixture/{0}".format(filename),"r") as file:
 		genome = file.readline().rstrip()
 		secondLine = file.readline().rstrip()
 		k = int(secondLine.split(' ')[0])

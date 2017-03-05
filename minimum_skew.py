@@ -7,10 +7,9 @@
 # DNA polymerase can only move in the 3'-> 5' direction of the parent strand, so one side of the strand will be copied continueously (we call it reverse half-strands as it's in the 3' -> 5' direction), while the other side will be copied dis-continueously (we call it forward half-strands), forming Okazaki fragments. The forward half-strands suffer delays, and spend much longer being single-stranded, compared to the reverse half-strands. Since single-stranded DNA has a much higher mutation rate than double-stranded DNA: if one of the four nucleotides in single-stranded DNA has a greater tendency than other nucleotides to mutate in single-stranded DNA, then we should observer a shortage of this nucleotide on the forward half-strand. Scientists discovered that cytosine has a tendency to mutate into thymine through a process called deamination, which rise 100-fold when DNA is single-stranded, resulting a decrease in cytosine on the forward half-strand. Also, since C-G base pairs eventually change into T-A base pairs, deamination results in decrease in guanine on the reverse half-strand. Thus there should be more guanine on the forward half-strand and more cytocine on the reverse half-strand, that is to say the difference between the total number of guanine and the total number of cytosine is positive on the forward half-strand, and negative on the reverse half-strand. With this knowledge, our goal is to traverse the genome, keeping a total count of the difference between the number of guanine and cytocine. If this difference starts increasing, then we are on the forward half-strand; if the difference starts decreasing, then we are on the reverse half-strand. When you read in the 5' -> 3' direction and notice the difference between G and C changed from decreasing to increasing, you are at the replication origin. Taking one step further, we can make a skew diagram by plotting "Skew(genome) sub i" as i ranges from 0 to then length of the genome, where "Skew(genome) sub 0" is zero. As we traversing the genome, we add 1 to the previous count if we encounter a G, subtract 1 to the previous count if we encounter a C, and keep the previous count if we encounter an A or T. This way, we are keeping a count of all nucleotides. When we find the lowest point(s) on that graph, we believe we find the ori.
 import matplotlib.pyplot as plt
 
-workingDir = "/Users/mli/Projects/DNA-analysis-tools/fixture/"
-#fileName = "minimum_skew_sample.txt"
-#fileName = "e_coli_clump_finding.txt" #This is the E.Coli dataset
-fileName = "minimum_skew_test.txt"
+#filename = "minimum_skew_sample.txt"
+#filename = "e_coli_clump_finding.txt" #This is the E.Coli dataset
+filename = "minimum_skew_test.txt"
 # the function takes a DNA string and outputs all integer(s) i minimizing "Skew(genome) sub i" among all values of i for the entire input genome
 def minimumSkew(genome):
 	skew = []
@@ -45,7 +44,7 @@ def minimumSkew(genome):
 
 
 if __name__ == '__main__':
-	with open(workingDir + fileName,'r') as file:
+	with open("fixture/{0}".format(filename),"r") as file:
 		genome = file.readline().rstrip()
 		minPosString = minimumSkew(genome)
 		print(minPosString)
