@@ -13,7 +13,7 @@ def frequentWordsWithMismatches(text, k, d):
 
 	return
 # The function neighbors() generates the set of all k-mers whose Hamming distance from pattern doesn not exceed d.
-# The input is a string pattern and an integer d, and the output is the collection of strings (one per line)
+# The input is a string pattern and an integer d, and the output is the collection of strings (one per line).
 def neighbors(pattern,d):
 	if d == 0:
 		return pattern.split()
@@ -28,16 +28,8 @@ def neighbors(pattern,d):
 		else:
 			neighborhood.add(pattern[0]+text)
 
-	# for i in range(0,len(pattern)):
-	# 	symbol = pattern[i]
-	# 	for e in ['A','T','C','G']:
-	# 		neighbor = pattern[0:i]+e+pattern[i+1:]
-	# 		neighborhood.add(neighbor)
 	neighborhoodList = list(neighborhood)
 	return neighborhoodList
-	#print type(neighborhoodList)
-	#return "\n".join(['ACC', 'ATG', 'AAG', 'ACG', 'GCG', 'AGG', 'ACA', 'ACT', 'TCG', 'CCG'])
-	#return "\n".join(neighborhoodList)
 
 if __name__ == '__main__':
 	neighborhoodList = neighbors("CAACGCAC",2)
