@@ -15,16 +15,16 @@ def frequentWordsWithMismatches(text, k, d):
 # The function neighbors() generates the set of all k-mers whose Hamming distance from pattern doesn not exceed d.
 # The input is a string pattern and an integer d, and the output is the collection of strings (one per line).
 def neighbors(pattern,d):
-	if d == 0:
+	if d == 0: # if Hamming distance is 0, then return the pattern itself in a list format
 		return pattern.split()
-	if len(pattern) == 1:
-		return ['A','T','C','G']
+	if len(pattern) == 1: 
+		return ['A','T','C','G'] # if the length of the pattern is 1 (and d doesn't equal to 0), then return ['A','T','C','G']
 	neighborhood = set()
-	suffixNeighbors = neighbors(pattern[1:],d) # suffixNeighbors is passing (the last k-1 mer,d) to the neighbors()
+	suffixNeighbors = neighbors(pattern[1:],d) # suffixNeighbors is passing the last k-1 mer and d to the neighbors()
 	for text in suffixNeighbors: #for each element in suffixNeighbors
 		if hammingDistance(pattern[1:],text) < d:
 			for e in ['A','T','C','G']:
-				neighborhood.add(e+text) # replacing the 
+				neighborhood.add(e+text)  
 		else:
 			neighborhood.add(pattern[0]+text)
 
