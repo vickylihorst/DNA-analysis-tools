@@ -143,11 +143,11 @@ if __name__ == "__main__":
 		#print(pattern)
 		#print(nucleotideToNumber("ATCG"))
 		#CAATTCGACGGAGAATCGGT
-		print(patternToNumber("CAATTCGACGGAGAATCGGT"))
-		number = patternToNumber2("CAATTCGACGGAGAATCGGT")
-		print(number)
-		#frequentPatterns = fasterFrequentWords(text,k)
-		#print(frequentPatterns)
+		#print(patternToNumber("CAATTCGACGGAGAATCGGT"))
+		#number = patternToNumber2("CAATTCGACGGAGAATCGGT")
+		#print(number)
+		frequentPatterns = fasterFrequentWords(text,k)
+		print(frequentPatterns)
 
 
 
