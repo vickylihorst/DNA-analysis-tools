@@ -1,7 +1,3 @@
-# pattern_count
-
-This program counts the frequency of a given pattern in a genome. 
-
 
 # frequent_words
 
@@ -11,6 +7,15 @@ The complexity of this algorith is O(n^2*k), where n is the length of the text.
 The function fasterFrequentWords() performs the same job but increases performance.
 
 The function patternToNumber() and patternToNumber2() solves the same problem, where they transform a k-mer pattern into an integer, which is the index of the pattern in the frequency array. The frequency array orders all 4^k k-mers lexicographically. The difference between the two functions is patternToNumber2() uses recursion.
+
+# frequent_words_with_mismatch
+
+Similar to frequent_words(), frequent_words_with_mismatch() finds the most frequent k-mer in a DNA string but with mismatches. The input is a string, and integers k and d (assumign k<=12 and d<=3). The output is most frequent k-mers with up to d mismatches in the string.
+
+
+# pattern_count
+
+This program counts the frequency of a given pattern in a genome. 
 
 
 # reverse_complement_string
@@ -50,9 +55,6 @@ The function approximatePatternMatch() finds where a pattern appears as a substr
 The functino neighbors() generates the set of all k-mers whose Hamming distance from pattern doesn not exceed d.
 
 
-# frequent_words_with_mismatch
-
-Similar to frequent_words(), frequent_words_with_mismatch() finds the most frequent k-mer in a DNA string but with mismatches. The input is a string, and integers k and d (assumign k<=12 and d<=3). The output is most frequent k-mers with up to d mismatches in the string.
 
 
 
