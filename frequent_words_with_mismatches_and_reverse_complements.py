@@ -1,5 +1,4 @@
 # Author: Vicky Li Horst
-#from frequent_words_with_mismatches import neighbors
 from frequent_words_with_mismatches import computingFrequenciesWithMismatches
 from reverse_complement_string import reverseComplementString
 from frequent_words import numberToPattern
