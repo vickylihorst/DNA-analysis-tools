@@ -10,8 +10,11 @@ The function patternToNumber() and patternToNumber2() solves the same problem, w
 
 # frequent_words_with_mismatch
 
-Similar to frequent_words(), frequent_words_with_mismatch() finds the most frequent k-mer in a DNA string but with mismatches. The input is a string, and integers k and d (assumign k<=12 and d<=3). The output is most frequent k-mers with up to d mismatches in the string.
+Similar to frequentWords(), frequentWordsWithMismatch() finds the most frequent k-mer in a DNA string but with mismatches. The input is a DNA string, and integers k and d (assumign k<=12 and d<=3). The output is most frequent k-mers with up to d mismatches in the string.
 
+# frequent_words_with_mismatch_and_reverse_complements
+
+Similar to frequentWords() and frequentWordsWithMismatch(), frequentWordsWithMismatch() also finds the most frequent k-mer in a DNA string, but with mismatches and reverse complements. The input is a DNA string Text, and integers k and d. The output is all k-mers maximazing the sum of Count(Text,Pattern) with d mismatches + Count(Text,Pattern-rc) with d mismatches over all possible k-mers.
 
 # pattern_count
 
